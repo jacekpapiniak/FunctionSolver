@@ -75,14 +75,15 @@ int main()
     std::cout << "1 - Objetosc walca" << std::endl;
     std::cout << "2 - Objetosc stozka" << std::endl;
     std::cout << "Wybor: " << std::endl;
-    std::cin >> x;
+    std::cin >> wyborDzialania;
     std::cout << std::endl;
     
 
     double R = 0.0;
     double h = 0.0;
 
-    switch ((Dzialanie) wyborDzialania)
+    Dzialanie wybor = static_cast<Dzialanie>(wyborDzialania);
+    switch (wybor)
     {
         case Kula:
             R = 0.0;
